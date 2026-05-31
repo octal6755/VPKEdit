@@ -1616,7 +1616,11 @@ void ScanSteamGamesWorker::run() {
 
 	// Add Steam games
 	for (auto appID : steam.getInstalledApps()) {
-		if (!steam.isAppUsingGoldSrcEngine(appID) && !steam.isAppUsingSourceEngine(appID) && !steam.isAppUsingSource2Engine(appID)) {
+		static constexpr std::array hardcodedSupportedAppIDs{
+			6880u,
+			6930u,
+		};
+		if (std::ranges::find(hardcodedSupportedAppIDs, appID) == std::end(hardcodedSupportedAppIDs) && !steam.isAppUsingGoldSrcEngine(appID) && !steam.isAppUsingSourceEngine(appID) && !steam.isAppUsingSource2Engine(appID)) {
 			continue;
 		}
 		sourceGames.emplace_back(
