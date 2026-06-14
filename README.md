@@ -5,6 +5,8 @@
 
 VPKEdit is an open source MIT-licensed tool that can create, extract from, preview the contents of and write to several pack file formats.
 
+<!-- rerun actions -->
+
 <div>
   <a href="https://github.com/Thumos96/VPKEdit/blob/master/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/license/Thumos96/VPKEdit?label=license" alt="License" /></a>
   <a href="https://github.com/Thumos96/VPKEdit/actions" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/actions/workflow/status/Thumos96/VPKEdit/build.yml?branch=master&label=builds" alt="Workflow Status" /></a>
